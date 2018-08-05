@@ -1,0 +1,6 @@
+Comprador	descrição	Preço Unitário	Quantidade	Endereço	Fornecedor
+Buyer 1	Description of Product 1	10.0	9	Test Street 1	Supplier 1
+Buyer 2	Description of Product 1	10.0	5	Test Street 2	Supplier 1
+Buyer 1	Description of Product 2	20.0	8	Test Street 1	Supplier 1
+Buyer 3	Description of Product 3	30.0	6	Test Street 3	Supplier 2
+Buyer 2	Description of Product 4	40.0	3	Test Street 2	Supplier 2

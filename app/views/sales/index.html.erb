@@ -1,0 +1,49 @@
+<h1>Listing sales</h1>
+<%= form_tag url_for(:controller => "sales", :action => "import"), :method => "post", :multipart=> "true"  do %>  
+  <div class='col-sm-12'>
+    <%= label 'file_upload', 'Import file:' %>
+  </div>
+  <div class='col-sm-5'>
+    <%= file_field_tag 'file_upload', :class => 'btn btn-default btn-xs' %>
+    </br>
+    <%= submit_tag "Import" %>    
+  </div>
+  <div class="alert alert-info col-sm-7">
+  </div>
+</div>
+<% end %>
+<br/>
+<br/>
+<table>
+  <thead>
+    <tr>
+      <th>Buyer</th>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Amount</th>
+      <th>Supplier</th>
+      <th>File</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.buyer_id %></td>
+        <td><%= sale.product_id %></td>
+        <td><%= sale.price %></td>
+        <td><%= sale.amount %></td>
+        <td><%= sale.supplier_id %></td>
+        <td><%= sale.file %></td>
+        <td><%= link_to 'Show', sale %></td>
+        <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
+        <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sale', new_sale_path %>

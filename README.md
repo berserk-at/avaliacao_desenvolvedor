@@ -1,3 +1,20 @@
+1.Instalação
+  1.1 Requisitos
+    Ruby 2.1.5
+    Rails 4.1.8
+    SQLite 3
+  1.2 Instruções de Deploy
+    1.2.1 - Copiar a pasta do projeto para o ambiente Linux
+    1.2.2 - Navegar via terminal até a pasta do projeto
+    1.2.3 - Instalar as gems necessárias com o comando $ bundle install
+    1.2.4 - Atualizar as gems instaladas com o comando $ bundle update
+    1.2.5 - Gerar e atualizar o banco de dados com o comando $ rake db:create db:migrate
+    1.2.6 - Iniciar o servidor com o comando rails server
+2.Acessar aplicação  
+  2.1 - Com um navegador acessar o endereço: http://localhost:3000/
+3.Executar rotina de testes
+  3.1 - Na pasta da aplicação executar o comando $ rake test  
+
 # Desafio de programação 1
 A idéia deste desafio é nos permitir avaliar melhor as habilidades de candidatos à vagas de programador, de vários níveis.
 
